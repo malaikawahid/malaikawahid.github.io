@@ -1,0 +1,538 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url(33_5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: transparent; 
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+}
+
+
+nav a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #ff8c00; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+.content {
+    margin: 0 auto; 
+    padding: 20px;
+    text-align: center;
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+}
+
+.content1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.heading-1{
+    color: #E6D245;
+    font-size: 48px;
+}
+.heading-2{
+    color: #fff;
+    font-size: 48px;
+}
+.image-container {
+    flex-basis: 45%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-content {
+    flex-basis: 50%;
+}
+
+.text-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    color: #beaeae;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#uploadButton {
+    background-color: #ff8c00;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#uploadButton:hover {
+    background-color: #333;
+}
+
+#imageInput {
+    display: none;
+}
+.success-message {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#showReportsLink {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#showReportsLink:hover {
+    background-color: #45a049;
+}
+
+/* report */
+.report-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block; 
+    text-align: left;
+}
+h1{
+    text-align: center;
+}
+
+.report-container h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px;
+}
+
+table td, table th {
+    padding: 10px;
+    border: 1px solid #e2dada; 
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td:first-child {
+    width: 30%;
+    font-weight: bold;
+}
+
+table td:last-child {
+    width: 70%;
+}
+
+.report-container p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+#dateTime {
+    font-size: 14px;
+    color: #777;
+}
+.report-container button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.report-container button:hover {
+    background-color: #45a049;
+}
+
+/* service */
+
+.doctor-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.doctor-profile {
+    position: relative;
+    width: 45%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.doctor-profile:hover {
+    transform: scale(1.05);
+}
+
+.doctor-profile img {
+    width: 50%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.doctor-profile h2,
+.doctor-profile p {
+    padding: 10px;
+    margin: 0;
+}
+
+.doctor-info-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.doctor-info h2,
+.doctor-info p {
+    margin: 0;
+}
+
+/* feedback */
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-form {
+    width: 45%;
+    text-align: left;
+}
+
+.feedback-form h1 {
+    color: #333;
+}
+
+.feedback-form form {
+    margin-top: 20px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.feedback-form button {
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.feedback-form button:hover {
+    background-color: #333;
+}
+
+.feedback-image {
+    width: 45%;
+}
+
+.feedback-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* about */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-image {
+    width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-content {
+    width: 50%;
+    text-align: center;
+    background-color: #4d5dc7;
+    color: #fff;
+    border-radius:8px ;
+}
+
+.about-content h1 {
+    color: #d3d0d0;
+    text-align: center;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* responsive style for all */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        text-align: left;
+    }
+
+    .report-container {
+        width: 100%;
+    }
+
+    table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    table td:first-child {
+        width: 100%;
+    }
+
+    .report-container p {
+        text-align: center; 
+    }
+}
+@media (max-width: 768px) {
+    .report-container button {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .doctor-profile {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .feedback-container {
+        flex-direction: column;
+    }
+
+    .feedback-form,
+    .feedback-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .feedback-form button {
+        margin-right: 0;
+    }
+}
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content {
+        margin-top: 20px;
+    }
+}
+
+
+
+/* ... (unchanged styles) ... */
+
+.doctor-info-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.doctor-info h2,
+.doctor-info p {
+    margin: 0;
+}
+
+/* Buttons in the Doctor Info */
+.doctor-info-buttons {
+    margin-top: 20px;
+}
+
+.doctor-info-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.doctor-info-buttons button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.appointment-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.appointment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #080606;
+    border-radius: 4px;
+}
+
+/* Added border to input fields */
+.appointment-form input:focus {
+    border-color: #4CAF50;
+}
+
+.appointment-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.appointment-form button:hover {
+    background-color: #45a049;
+}
+.success-message {
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .appointment-form {
+        max-width: 100%;
+    }
+}
